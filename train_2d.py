@@ -148,19 +148,39 @@ def load_2d_data(root_path, sequences, simulations):
 # ==========================================
 # 5. Main training and evaluation pipeline
 # ==========================================
-def run_2d_neural_pipeline(root_dir="train/VGA"):
+def run_2d_neural_pipeline(root_dir="train"):
     sims = [
         "low dyn with columns 1",
         "low dyn with columns 2",
         "low dyn with columns 3",
     ]
 
-    print(">>> 1. Extracting 2D features (this may take some time)...")
-    X_train, Y_train, _ = load_2d_data(root_dir, ["sequence_1", "sequence_2"], sims)
-    X_val, Y_val, _ = load_2d_data(root_dir, ["sequence_3"], sims)
+    print(">>> 1. Extracting 2D features (VGA, SXGA, HD)...")
 
-    if not X_train or not X_val:
-        raise ValueError("Not enough data found; please check the paths.")
+    # Get VGA
+    X_train_v, Y_train_v, _ = load_2d_data(
+        f"{root_dir}/VGA", ["sequence_1", "sequence_2"], sims
+    )
+    X_val_v, Y_val_v, _ = load_2d_data(f"{root_dir}/VGA", ["sequence_3"], sims)
+
+    # Get SXGA
+    X_train_s, Y_train_s, _ = load_2d_data(
+        f"{root_dir}/SXGA", ["sequence_1", "sequence_2"], sims
+    )
+    X_val_s, Y_val_s, _ = load_2d_data(f"{root_dir}/SXGA", ["sequence_3"], sims)
+
+    # Get HD
+    X_train_h, Y_train_h, _ = load_2d_data(
+        f"{root_dir}/HD", ["sequence_1", "sequence_2"], sims
+    )
+    X_val_h, Y_val_h, _ = load_2d_data(f"{root_dir}/HD", ["sequence_3"], sims)
+
+    # Mix all sensors together for training and validation
+    X_train = X_train_v + X_train_s + X_train_h
+    Y_train = Y_train_v + Y_train_s + Y_train_h
+
+    X_val = X_val_v + X_val_s + X_val_h
+    Y_val = Y_val_v + Y_val_s + Y_val_h
 
     train_dataset = RandomPatchDataset(
         X_train, Y_train, patch_size=(128, 128), patches_per_img=30
@@ -238,4 +258,4 @@ def run_2d_neural_pipeline(root_dir="train/VGA"):
 
 
 if __name__ == "__main__":
-    run_2d_neural_pipeline(root_dir="train/VGA")
+    run_2d_neural_pipeline(root_dir="train")
