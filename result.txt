@@ -1,0 +1,245 @@
+Only trained on VGA sequence_1, sequence_2
+
+[HD/sequence_1 1] TP=2.498 FP=0.000 FN=1.252 Prec=1.000 Rec=0.666 F1=0.800 RMSE_def=28.04 RMSE_ok=0.00 RMSE_def_norm=0.30 RMSE_ok_norm=1.00 Score final : 0.7006
+
+[HD/sequence_1 2] TP=1.898 FP=0.000 FN=0.915 Prec=1.000 Rec=0.675 F1=0.806 RMSE_def=18.71 RMSE_ok=0.00 RMSE_def_norm=0.53 RMSE_ok_norm=1.00 Score final : 0.7796
+
+[HD/sequence_1 3] TP=6.436 FP=0.000 FN=2.939 Prec=1.000 Rec=0.686 F1=0.814 RMSE_def=21.43 RMSE_ok=0.00 RMSE_def_norm=0.46 RMSE_ok_norm=1.00 Score final : 0.7600
+
+[HD/sequence_2 1] TP=3.915 FP=0.000 FN=2.648 Prec=1.000 Rec=0.597 F1=0.747 RMSE_def=26.56 RMSE_ok=0.00 RMSE_def_norm=0.34 RMSE_ok_norm=1.00 Score final : 0.6949
+
+[HD/sequence_2 2] TP=3.448 FP=0.000 FN=1.240 Prec=1.000 Rec=0.736 F1=0.848 RMSE_def=15.98 RMSE_ok=0.00 RMSE_def_norm=0.60 RMSE_ok_norm=1.00 Score final : 0.8163
+
+[HD/sequence_2 3] TP=4.126 FP=0.000 FN=1.499 Prec=1.000 Rec=0.733 F1=0.846 RMSE_def=26.07 RMSE_ok=0.00 RMSE_def_norm=0.35 RMSE_ok_norm=1.00 Score final : 0.7326
+
+[HD/sequence_3 1] TP=2.612 FP=0.000 FN=1.137 Prec=1.000 Rec=0.697 F1=0.821 RMSE_def=28.67 RMSE_ok=0.00 RMSE_def_norm=0.28 RMSE_ok_norm=1.00 Score final : 0.7027
+
+[HD/sequence_3 2] TP=3.358 FP=0.000 FN=1.330 Prec=1.000 Rec=0.716 F1=0.835 RMSE_def=26.20 RMSE_ok=0.00 RMSE_def_norm=0.35 RMSE_ok_norm=1.00 Score final : 0.7277
+
+[HD/sequence_3 3] TP=5.891 FP=0.000 FN=1.609 Prec=1.000 Rec=0.785 F1=0.880 RMSE_def=24.75 RMSE_ok=0.00 RMSE_def_norm=0.38 RMSE_ok_norm=1.00 Score final : 0.7549
+
+[SXGA/sequence_1 1] TP=11.227 FP=0.781 FN=4.398 Prec=0.935 Rec=0.719 F1=0.813 RMSE_def=30.03 RMSE_ok=0.15 RMSE_def_norm=0.25 RMSE_ok_norm=1.00 Score final : 0.6873
+
+[SXGA/sequence_1 2] TP=4.383 FP=0.781 FN=1.867 Prec=0.849 Rec=0.701 F1=0.768 RMSE_def=14.74 RMSE_ok=0.28 RMSE_def_norm=0.63 RMSE_ok_norm=0.99 Score final : 0.7973
+
+[SXGA/sequence_1 3] TP=6.122 FP=1.172 FN=3.253 Prec=0.839 Rec=0.653 F1=0.735 RMSE_def=20.91 RMSE_ok=0.26 RMSE_def_norm=0.48 RMSE_ok_norm=0.99 Score final : 0.7351
+
+[SXGA/sequence_2 1] TP=6.000 FP=0.000 FN=5.025 Prec=1.000 Rec=0.544 F1=0.705 RMSE_def=25.38 RMSE_ok=0.00 RMSE_def_norm=0.37 RMSE_ok_norm=1.00 Score final : 0.6902
+
+[SXGA/sequence_2 2] TP=9.844 FP=0.000 FN=6.694 Prec=1.000 Rec=0.595 F1=0.746 RMSE_def=14.38 RMSE_ok=0.00 RMSE_def_norm=0.64 RMSE_ok_norm=1.00 Score final : 0.7951
+
+[SXGA/sequence_2 3] TP=4.713 FP=0.000 FN=2.638 Prec=1.000 Rec=0.641 F1=0.781 RMSE_def=22.21 RMSE_ok=0.00 RMSE_def_norm=0.44 RMSE_ok_norm=1.00 Score final : 0.7424
+
+[SXGA/sequence_3 1] TP=5.266 FP=0.391 FN=4.109 Prec=0.931 Rec=0.562 F1=0.701 RMSE_def=29.83 RMSE_ok=0.13 RMSE_def_norm=0.25 RMSE_ok_norm=1.00 Score final : 0.6511
+
+[SXGA/sequence_3 2] TP=5.823 FP=0.000 FN=3.552 Prec=1.000 Rec=0.621 F1=0.766 RMSE_def=20.77 RMSE_ok=0.00 RMSE_def_norm=0.48 RMSE_ok_norm=1.00 Score final : 0.7492
+
+[SXGA/sequence_3 3] TP=7.152 FP=0.000 FN=3.786 Prec=1.000 Rec=0.654 F1=0.791 RMSE_def=26.86 RMSE_ok=0.00 RMSE_def_norm=0.33 RMSE_ok_norm=1.00 Score final : 0.7073
+
+[VGA/sequence_1 1] TP=2.616 FP=0.000 FN=0.019 Prec=1.000 Rec=0.993 F1=0.996 RMSE_def=27.52 RMSE_ok=0.00 RMSE_def_norm=0.31 RMSE_ok_norm=1.00 Score final : 0.7717
+
+[VGA/sequence_1 2] TP=8.753 FP=0.000 FN=0.028 Prec=1.000 Rec=0.997 F1=0.998 RMSE_def=18.81 RMSE_ok=0.00 RMSE_def_norm=0.53 RMSE_ok_norm=1.00 Score final : 0.8443
+
+[VGA/sequence_1 3] TP=8.781 FP=0.000 FN=0.000 Prec=1.000 Rec=1.000 F1=1.000 RMSE_def=26.35 RMSE_ok=0.00 RMSE_def_norm=0.34 RMSE_ok_norm=1.00 Score final : 0.7826
+
+[VGA/sequence_2 1] TP=10.091 FP=0.000 FN=0.048 Prec=1.000 Rec=0.995 F1=0.998 RMSE_def=27.28 RMSE_ok=0.00 RMSE_def_norm=0.32 RMSE_ok_norm=1.00 Score final : 0.7742
+
+[VGA/sequence_2 2] TP=7.189 FP=0.000 FN=0.053 Prec=1.000 Rec=0.993 F1=0.996 RMSE_def=16.19 RMSE_ok=0.00 RMSE_def_norm=0.60 RMSE_ok_norm=1.00 Score final : 0.8652
+
+[VGA/sequence_2 3] TP=11.556 FP=0.000 FN=0.031 Prec=1.000 Rec=0.997 F1=0.999 RMSE_def=24.96 RMSE_ok=0.00 RMSE_def_norm=0.38 RMSE_ok_norm=1.00 Score final : 0.7936
+
+[VGA/sequence_3 1] TP=3.106 FP=0.000 FN=0.019 Prec=1.000 Rec=0.994 F1=0.997 RMSE_def=30.09 RMSE_ok=0.00 RMSE_def_norm=0.25 RMSE_ok_norm=1.00 Score final : 0.7507
+
+[VGA/sequence_3 2] TP=3.091 FP=0.000 FN=0.034 Prec=1.000 Rec=0.989 F1=0.994 RMSE_def=13.21 RMSE_ok=0.00 RMSE_def_norm=0.67 RMSE_ok_norm=1.00 Score final : 0.8892
+
+[VGA/sequence_3 3] TP=6.509 FP=0.000 FN=0.522 Prec=1.000 Rec=0.926 F1=0.961 RMSE_def=23.75 RMSE_ok=0.00 RMSE_def_norm=0.41 RMSE_ok_norm=1.00 Score final : 0.7909
+
+
+
+=== SCORE FINAL MOYEN SUR TOUTES LES SÉQUENCES ===
+
+Score moyen = 0.758764 
+
+
+
+====================================================================================
+
+
+
+Trained on 3 sets
+
+[HD/sequence_1 1] TP=3.616 FP=0.000 FN=0.134 Prec=1.000 Rec=0.964 F1=0.982 RMSE_def=26.11 RMSE_ok=0.00 RMSE_def_norm=0.35 RMSE_ok_norm=1.00 Score final : 0.7784
+
+[HD/sequence_1 2] TP=2.803 FP=0.000 FN=0.009 Prec=1.000 Rec=0.997 F1=0.998 RMSE_def=11.87 RMSE_ok=0.00 RMSE_def_norm=0.70 RMSE_ok_norm=1.00 Score final : 0.9015
+
+[HD/sequence_1 3] TP=7.923 FP=0.000 FN=1.452 Prec=1.000 Rec=0.845 F1=0.916 RMSE_def=15.58 RMSE_ok=0.00 RMSE_def_norm=0.61 RMSE_ok_norm=1.00 Score final : 0.8429
+
+[HD/sequence_2 1] TP=4.938 FP=0.703 FN=1.624 Prec=0.875 Rec=0.753 F1=0.809 RMSE_def=25.97 RMSE_ok=0.27 RMSE_def_norm=0.35 RMSE_ok_norm=0.99 Score final : 0.7187
+
+[HD/sequence_2 2] TP=3.991 FP=0.703 FN=0.696 Prec=0.850 Rec=0.851 F1=0.851 RMSE_def=16.04 RMSE_ok=0.20 RMSE_def_norm=0.60 RMSE_ok_norm=0.99 Score final : 0.8153
+
+[HD/sequence_2 3] TP=4.672 FP=1.641 FN=0.953 Prec=0.740 Rec=0.831 F1=0.783 RMSE_def=23.08 RMSE_ok=0.45 RMSE_def_norm=0.42 RMSE_ok_norm=0.99 Score final : 0.7319
+
+[HD/sequence_3 1] TP=3.195 FP=0.234 FN=0.555 Prec=0.932 Rec=0.852 F1=0.890 RMSE_def=24.62 RMSE_ok=0.12 RMSE_def_norm=0.38 RMSE_ok_norm=1.00 Score final : 0.7586
+
+[HD/sequence_3 2] TP=4.666 FP=0.234 FN=0.022 Prec=0.952 Rec=0.995 F1=0.973 RMSE_def=18.51 RMSE_ok=0.12 RMSE_def_norm=0.54 RMSE_ok_norm=1.00 Score final : 0.8373
+
+[HD/sequence_3 3] TP=6.945 FP=0.234 FN=0.555 Prec=0.967 Rec=0.926 F1=0.946 RMSE_def=23.74 RMSE_ok=0.12 RMSE_def_norm=0.41 RMSE_ok_norm=1.00 Score final : 0.7849
+
+[SXGA/sequence_1 1] TP=14.731 FP=1.172 FN=0.894 Prec=0.926 Rec=0.943 F1=0.934 RMSE_def=27.53 RMSE_ok=0.24 RMSE_def_norm=0.31 RMSE_ok_norm=0.99 Score final : 0.7486
+
+[SXGA/sequence_1 2] TP=5.914 FP=1.953 FN=0.336 Prec=0.752 Rec=0.946 F1=0.838 RMSE_def=13.32 RMSE_ok=0.60 RMSE_def_norm=0.67 RMSE_ok_norm=0.98 Score final : 0.8300
+
+[SXGA/sequence_1 3] TP=9.350 FP=3.125 FN=0.025 Prec=0.749 Rec=0.997 F1=0.856 RMSE_def=18.51 RMSE_ok=0.63 RMSE_def_norm=0.54 RMSE_ok_norm=0.98 Score final : 0.7931
+
+[SXGA/sequence_2 1] TP=7.227 FP=1.378 FN=3.798 Prec=0.840 Rec=0.655 F1=0.736 RMSE_def=26.19 RMSE_ok=0.41 RMSE_def_norm=0.35 RMSE_ok_norm=0.99 Score final : 0.6909
+
+[SXGA/sequence_2 2] TP=11.070 FP=0.459 FN=5.468 Prec=0.960 Rec=0.669 F1=0.789 RMSE_def=14.22 RMSE_ok=0.18 RMSE_def_norm=0.64 RMSE_ok_norm=1.00 Score final : 0.8094
+
+[SXGA/sequence_2 3] TP=5.584 FP=0.919 FN=1.766 Prec=0.859 Rec=0.760 F1=0.806 RMSE_def=21.58 RMSE_ok=0.24 RMSE_def_norm=0.46 RMSE_ok_norm=0.99 Score final : 0.7541
+
+[SXGA/sequence_3 1] TP=7.826 FP=3.516 FN=1.549 Prec=0.690 Rec=0.835 F1=0.756 RMSE_def=30.28 RMSE_ok=1.77 RMSE_def_norm=0.24 RMSE_ok_norm=0.96 Score final : 0.6525
+
+[SXGA/sequence_3 2] TP=7.589 FP=3.516 FN=1.786 Prec=0.683 Rec=0.809 F1=0.741 RMSE_def=20.34 RMSE_ok=0.78 RMSE_def_norm=0.49 RMSE_ok_norm=0.98 Score final : 0.7378
+
+[SXGA/sequence_3 3] TP=8.311 FP=3.125 FN=2.627 Prec=0.727 Rec=0.760 F1=0.743 RMSE_def=24.50 RMSE_ok=0.78 RMSE_def_norm=0.39 RMSE_ok_norm=0.98 Score final : 0.7040
+
+[VGA/sequence_1 1] TP=2.616 FP=0.878 FN=0.019 Prec=0.749 Rec=0.993 F1=0.854 RMSE_def=27.49 RMSE_ok=0.28 RMSE_def_norm=0.31 RMSE_ok_norm=0.99 Score final : 0.7211
+
+[VGA/sequence_1 2] TP=8.738 FP=0.878 FN=0.044 Prec=0.909 Rec=0.995 F1=0.950 RMSE_def=18.72 RMSE_ok=0.29 RMSE_def_norm=0.53 RMSE_ok_norm=0.99 Score final : 0.8262
+
+[VGA/sequence_1 3] TP=8.764 FP=0.878 FN=0.017 Prec=0.909 Rec=0.998 F1=0.951 RMSE_def=26.29 RMSE_ok=0.29 RMSE_def_norm=0.34 RMSE_ok_norm=0.99 Score final : 0.7642
+
+[VGA/sequence_2 1] TP=10.091 FP=0.000 FN=0.048 Prec=1.000 Rec=0.995 F1=0.998 RMSE_def=27.61 RMSE_ok=0.00 RMSE_def_norm=0.31 RMSE_ok_norm=1.00 Score final : 0.7714
+
+[VGA/sequence_2 2] TP=7.189 FP=0.000 FN=0.053 Prec=1.000 Rec=0.993 F1=0.996 RMSE_def=15.85 RMSE_ok=0.00 RMSE_def_norm=0.60 RMSE_ok_norm=1.00 Score final : 0.8680
+
+[VGA/sequence_2 3] TP=11.531 FP=0.000 FN=0.056 Prec=1.000 Rec=0.995 F1=0.998 RMSE_def=23.33 RMSE_ok=0.00 RMSE_def_norm=0.42 RMSE_ok_norm=1.00 Score final : 0.8067
+
+[VGA/sequence_3 1] TP=3.106 FP=0.000 FN=0.019 Prec=1.000 Rec=0.994 F1=0.997 RMSE_def=29.55 RMSE_ok=0.00 RMSE_def_norm=0.26 RMSE_ok_norm=1.00 Score final : 0.7552
+
+[VGA/sequence_3 2] TP=2.672 FP=0.000 FN=0.453 Prec=1.000 Rec=0.855 F1=0.922 RMSE_def=13.16 RMSE_ok=0.00 RMSE_def_norm=0.67 RMSE_ok_norm=1.00 Score final : 0.8648
+
+[VGA/sequence_3 3] TP=6.509 FP=0.000 FN=0.522 Prec=1.000 Rec=0.926 F1=0.961 RMSE_def=23.76 RMSE_ok=0.00 RMSE_def_norm=0.41 RMSE_ok_norm=1.00 Score final : 0.7909
+
+
+
+=== SCORE FINAL MOYEN SUR TOUTES LES SÉQUENCES ===
+
+Score moyen = 0.779942 
+
+
+
+====================================================================================
+
+
+
+Trained on 3 sets - (5,1) kernel with safety_thresh
+
+[HD/sequence_1 1] TP=3.727 FP=0.215 FN=0.023 Prec=0.946 Rec=0.994 F1=0.969 RMSE_def=26.17 RMSE_ok=0.05 RMSE_def_norm=0.35 RMSE_ok_norm=1.00 Score final : 0.7732
+[HD/sequence_1 2] TP=2.803 FP=0.000 FN=0.009 Prec=1.000 Rec=0.997 F1=0.998 RMSE_def=11.64 RMSE_ok=0.00 RMSE_def_norm=0.71 RMSE_ok_norm=1.00 Score final : 0.9034
+[HD/sequence_1 3] TP=8.037 FP=0.000 FN=1.337 Prec=1.000 Rec=0.857 F1=0.923 RMSE_def=15.51 RMSE_ok=0.00 RMSE_def_norm=0.61 RMSE_ok_norm=1.00 Score final : 0.8459
+[HD/sequence_2 1] TP=5.078 FP=1.873 FN=1.484 Prec=0.731 Rec=0.774 F1=0.752 RMSE_def=25.97 RMSE_ok=0.34 RMSE_def_norm=0.35 RMSE_ok_norm=0.99 Score final : 0.6985
+[HD/sequence_2 2] TP=4.184 FP=1.872 FN=0.504 Prec=0.691 Rec=0.892 F1=0.779 RMSE_def=16.00 RMSE_ok=0.30 RMSE_def_norm=0.60 RMSE_ok_norm=0.99 Score final : 0.7903
+[HD/sequence_2 3] TP=4.672 FP=3.042 FN=0.953 Prec=0.606 Rec=0.831 F1=0.700 RMSE_def=23.04 RMSE_ok=0.51 RMSE_def_norm=0.42 RMSE_ok_norm=0.99 Score final : 0.7039
+[HD/sequence_3 1] TP=3.203 FP=0.234 FN=0.547 Prec=0.932 Rec=0.854 F1=0.891 RMSE_def=24.60 RMSE_ok=0.11 RMSE_def_norm=0.38 RMSE_ok_norm=1.00 Score final : 0.7592
+[HD/sequence_3 2] TP=4.666 FP=0.234 FN=0.022 Prec=0.952 Rec=0.995 F1=0.973 RMSE_def=18.42 RMSE_ok=0.11 RMSE_def_norm=0.54 RMSE_ok_norm=1.00 Score final : 0.8380
+[HD/sequence_3 3] TP=7.220 FP=0.234 FN=0.280 Prec=0.969 Rec=0.963 F1=0.966 RMSE_def=23.81 RMSE_ok=0.12 RMSE_def_norm=0.40 RMSE_ok_norm=1.00 Score final : 0.7909
+[SXGA/sequence_1 1] TP=15.379 FP=3.115 FN=0.246 Prec=0.832 Rec=0.984 F1=0.901 RMSE_def=27.51 RMSE_ok=0.31 RMSE_def_norm=0.31 RMSE_ok_norm=0.99 Score final : 0.7370
+[SXGA/sequence_1 2] TP=5.914 FP=2.344 FN=0.336 Prec=0.716 Rec=0.946 F1=0.815 RMSE_def=13.38 RMSE_ok=0.62 RMSE_def_norm=0.67 RMSE_ok_norm=0.98 Score final : 0.8217
+[SXGA/sequence_1 3] TP=9.350 FP=3.516 FN=0.025 Prec=0.727 Rec=0.997 F1=0.841 RMSE_def=18.57 RMSE_ok=0.65 RMSE_def_norm=0.54 RMSE_ok_norm=0.98 Score final : 0.7873
+[SXGA/sequence_2 1] TP=7.227 FP=1.378 FN=3.798 Prec=0.840 Rec=0.655 F1=0.736 RMSE_def=26.21 RMSE_ok=0.43 RMSE_def_norm=0.34 RMSE_ok_norm=0.99 Score final : 0.6906
+[SXGA/sequence_2 2] TP=11.250 FP=0.459 FN=5.287 Prec=0.961 Rec=0.680 F1=0.797 RMSE_def=14.24 RMSE_ok=0.18 RMSE_def_norm=0.64 RMSE_ok_norm=1.00 Score final : 0.8119
+[SXGA/sequence_2 3] TP=5.584 FP=0.919 FN=1.766 Prec=0.859 Rec=0.760 F1=0.806 RMSE_def=21.60 RMSE_ok=0.28 RMSE_def_norm=0.46 RMSE_ok_norm=0.99 Score final : 0.7536
+[SXGA/sequence_3 1] TP=8.106 FP=4.686 FN=1.269 Prec=0.634 Rec=0.865 F1=0.731 RMSE_def=30.36 RMSE_ok=1.81 RMSE_def_norm=0.24 RMSE_ok_norm=0.95 Score final : 0.6433
+[SXGA/sequence_3 2] TP=7.589 FP=4.297 FN=1.786 Prec=0.638 Rec=0.809 F1=0.714 RMSE_def=20.32 RMSE_ok=0.84 RMSE_def_norm=0.49 RMSE_ok_norm=0.98 Score final : 0.7282
+[SXGA/sequence_3 3] TP=8.492 FP=3.515 FN=2.445 Prec=0.707 Rec=0.776 F1=0.740 RMSE_def=24.52 RMSE_ok=0.88 RMSE_def_norm=0.39 RMSE_ok_norm=0.98 Score final : 0.7021
+[VGA/sequence_1 1] TP=2.616 FP=2.625 FN=0.019 Prec=0.499 Rec=0.993 F1=0.664 RMSE_def=27.42 RMSE_ok=0.35 RMSE_def_norm=0.31 RMSE_ok_norm=0.99 Score final : 0.6567
+[VGA/sequence_1 2] TP=8.738 FP=3.495 FN=0.044 Prec=0.714 Rec=0.995 F1=0.832 RMSE_def=18.75 RMSE_ok=0.38 RMSE_def_norm=0.53 RMSE_ok_norm=0.99 Score final : 0.7850
+[VGA/sequence_1 3] TP=8.764 FP=1.755 FN=0.017 Prec=0.833 Rec=0.998 F1=0.908 RMSE_def=26.26 RMSE_ok=0.32 RMSE_def_norm=0.34 RMSE_ok_norm=0.99 Score final : 0.7495
+[VGA/sequence_2 1] TP=10.091 FP=0.000 FN=0.048 Prec=1.000 Rec=0.995 F1=0.998 RMSE_def=27.65 RMSE_ok=0.00 RMSE_def_norm=0.31 RMSE_ok_norm=1.00 Score final : 0.7711
+[VGA/sequence_2 2] TP=7.189 FP=1.441 FN=0.053 Prec=0.833 Rec=0.993 F1=0.906 RMSE_def=15.84 RMSE_ok=0.13 RMSE_def_norm=0.60 RMSE_ok_norm=1.00 Score final : 0.8363
+[VGA/sequence_2 3] TP=11.531 FP=1.439 FN=0.056 Prec=0.889 Rec=0.995 F1=0.939 RMSE_def=23.38 RMSE_ok=0.13 RMSE_def_norm=0.42 RMSE_ok_norm=1.00 Score final : 0.7854
+[VGA/sequence_3 1] TP=3.106 FP=0.781 FN=0.019 Prec=0.799 Rec=0.994 F1=0.886 RMSE_def=29.43 RMSE_ok=0.18 RMSE_def_norm=0.26 RMSE_ok_norm=1.00 Score final : 0.7169
+[VGA/sequence_3 2] TP=2.672 FP=0.000 FN=0.453 Prec=1.000 Rec=0.855 F1=0.922 RMSE_def=13.16 RMSE_ok=0.00 RMSE_def_norm=0.67 RMSE_ok_norm=1.00 Score final : 0.8649
+[VGA/sequence_3 3] TP=6.509 FP=0.000 FN=0.522 Prec=1.000 Rec=0.926 F1=0.961 RMSE_def=23.73 RMSE_ok=0.00 RMSE_def_norm=0.41 RMSE_ok_norm=1.00 Score final : 0.7911
+
+=== SCORE FINAL MOYEN SUR TOUTES LES SÉQUENCES ===
+Score moyen = 0.767992
+
+
+
+====================================================================================
+
+
+
+Trained on 3 sets - (7,1) kernel with safety_thresh
+
+[HD/sequence_1 1] TP=3.626 FP=0.000 FN=0.124 Prec=1.000 Rec=0.967 F1=0.983 RMSE_def=26.24 RMSE_ok=0.00 RMSE_def_norm=0.34 RMSE_ok_norm=1.00 Score final : 0.7778
+[HD/sequence_1 2] TP=2.801 FP=0.000 FN=0.012 Prec=1.000 Rec=0.996 F1=0.998 RMSE_def=11.77 RMSE_ok=0.00 RMSE_def_norm=0.71 RMSE_ok_norm=1.00 Score final : 0.9021
+[HD/sequence_1 3] TP=7.923 FP=0.000 FN=1.452 Prec=1.000 Rec=0.845 F1=0.916 RMSE_def=15.53 RMSE_ok=0.00 RMSE_def_norm=0.61 RMSE_ok_norm=1.00 Score final : 0.8433
+[HD/sequence_2 1] TP=4.938 FP=1.406 FN=1.624 Prec=0.778 Rec=0.753 F1=0.765 RMSE_def=25.96 RMSE_ok=0.31 RMSE_def_norm=0.35 RMSE_ok_norm=0.99 Score final : 0.7035
+[HD/sequence_2 2] TP=4.102 FP=1.172 FN=0.585 Prec=0.778 Rec=0.875 F1=0.824 RMSE_def=16.02 RMSE_ok=0.25 RMSE_def_norm=0.60 RMSE_ok_norm=0.99 Score final : 0.8059
+[HD/sequence_2 3] TP=4.672 FP=2.108 FN=0.953 Prec=0.689 Rec=0.831 F1=0.753 RMSE_def=23.06 RMSE_ok=0.47 RMSE_def_norm=0.42 RMSE_ok_norm=0.99 Score final : 0.7220
+[HD/sequence_3 1] TP=3.198 FP=0.234 FN=0.552 Prec=0.932 Rec=0.853 F1=0.891 RMSE_def=24.57 RMSE_ok=0.11 RMSE_def_norm=0.39 RMSE_ok_norm=1.00 Score final : 0.7591
+[HD/sequence_3 2] TP=4.666 FP=0.234 FN=0.022 Prec=0.952 Rec=0.995 F1=0.973 RMSE_def=18.48 RMSE_ok=0.11 RMSE_def_norm=0.54 RMSE_ok_norm=1.00 Score final : 0.8375
+[HD/sequence_3 3] TP=6.945 FP=0.234 FN=0.555 Prec=0.967 Rec=0.926 F1=0.946 RMSE_def=23.80 RMSE_ok=0.12 RMSE_def_norm=0.41 RMSE_ok_norm=1.00 Score final : 0.7844
+[SXGA/sequence_1 1] TP=15.193 FP=1.562 FN=0.432 Prec=0.907 Rec=0.972 F1=0.938 RMSE_def=27.51 RMSE_ok=0.26 RMSE_def_norm=0.31 RMSE_ok_norm=0.99 Score final : 0.7499
+[SXGA/sequence_1 2] TP=5.914 FP=2.344 FN=0.336 Prec=0.716 Rec=0.946 F1=0.815 RMSE_def=13.35 RMSE_ok=0.60 RMSE_def_norm=0.67 RMSE_ok_norm=0.98 Score final : 0.8221
+[SXGA/sequence_1 3] TP=9.350 FP=3.516 FN=0.025 Prec=0.727 Rec=0.997 F1=0.841 RMSE_def=18.56 RMSE_ok=0.63 RMSE_def_norm=0.54 RMSE_ok_norm=0.98 Score final : 0.7876
+[SXGA/sequence_2 1] TP=7.227 FP=1.378 FN=3.798 Prec=0.840 Rec=0.655 F1=0.736 RMSE_def=26.20 RMSE_ok=0.43 RMSE_def_norm=0.34 RMSE_ok_norm=0.99 Score final : 0.6906
+[SXGA/sequence_2 2] TP=11.070 FP=0.459 FN=5.468 Prec=0.960 Rec=0.669 F1=0.789 RMSE_def=14.24 RMSE_ok=0.18 RMSE_def_norm=0.64 RMSE_ok_norm=1.00 Score final : 0.8093
+[SXGA/sequence_2 3] TP=5.584 FP=0.919 FN=1.766 Prec=0.859 Rec=0.760 F1=0.806 RMSE_def=21.59 RMSE_ok=0.26 RMSE_def_norm=0.46 RMSE_ok_norm=0.99 Score final : 0.7538
+[SXGA/sequence_3 1] TP=8.106 FP=3.905 FN=1.269 Prec=0.675 Rec=0.865 F1=0.758 RMSE_def=30.32 RMSE_ok=1.78 RMSE_def_norm=0.24 RMSE_ok_norm=0.96 Score final : 0.6529
+[SXGA/sequence_3 2] TP=7.589 FP=4.297 FN=1.786 Prec=0.638 Rec=0.809 F1=0.714 RMSE_def=20.33 RMSE_ok=0.82 RMSE_def_norm=0.49 RMSE_ok_norm=0.98 Score final : 0.7283
+[SXGA/sequence_3 3] TP=8.311 FP=3.125 FN=2.627 Prec=0.727 Rec=0.760 F1=0.743 RMSE_def=24.54 RMSE_ok=0.83 RMSE_def_norm=0.39 RMSE_ok_norm=0.98 Score final : 0.7033
+[VGA/sequence_1 1] TP=2.616 FP=1.755 FN=0.019 Prec=0.598 Rec=0.993 F1=0.747 RMSE_def=27.42 RMSE_ok=0.33 RMSE_def_norm=0.31 RMSE_ok_norm=0.99 Score final : 0.6850
+[VGA/sequence_1 2] TP=8.738 FP=1.755 FN=0.044 Prec=0.833 Rec=0.995 F1=0.907 RMSE_def=18.75 RMSE_ok=0.33 RMSE_def_norm=0.53 RMSE_ok_norm=0.99 Score final : 0.8109
+[VGA/sequence_1 3] TP=8.764 FP=0.878 FN=0.017 Prec=0.909 Rec=0.998 F1=0.951 RMSE_def=26.26 RMSE_ok=0.29 RMSE_def_norm=0.34 RMSE_ok_norm=0.99 Score final : 0.7645
+[VGA/sequence_2 1] TP=10.091 FP=0.000 FN=0.048 Prec=1.000 Rec=0.995 F1=0.998 RMSE_def=27.63 RMSE_ok=0.00 RMSE_def_norm=0.31 RMSE_ok_norm=1.00 Score final : 0.7712
+[VGA/sequence_2 2] TP=7.189 FP=0.000 FN=0.053 Prec=1.000 Rec=0.993 F1=0.996 RMSE_def=15.82 RMSE_ok=0.00 RMSE_def_norm=0.60 RMSE_ok_norm=1.00 Score final : 0.8682
+[VGA/sequence_2 3] TP=11.531 FP=0.000 FN=0.056 Prec=1.000 Rec=0.995 F1=0.998 RMSE_def=23.35 RMSE_ok=0.00 RMSE_def_norm=0.42 RMSE_ok_norm=1.00 Score final : 0.8065
+[VGA/sequence_3 1] TP=3.106 FP=0.780 FN=0.019 Prec=0.799 Rec=0.994 F1=0.886 RMSE_def=29.45 RMSE_ok=0.14 RMSE_def_norm=0.26 RMSE_ok_norm=1.00 Score final : 0.7172
+[VGA/sequence_3 2] TP=2.672 FP=0.000 FN=0.453 Prec=1.000 Rec=0.855 F1=0.922 RMSE_def=13.16 RMSE_ok=0.00 RMSE_def_norm=0.67 RMSE_ok_norm=1.00 Score final : 0.8649
+[VGA/sequence_3 3] TP=6.509 FP=0.000 FN=0.522 Prec=1.000 Rec=0.926 F1=0.961 RMSE_def=23.76 RMSE_ok=0.00 RMSE_def_norm=0.41 RMSE_ok_norm=1.00 Score final : 0.7909
+
+=== SCORE FINAL MOYEN SUR TOUTES LES SÉQUENCES ===
+Score moyen = 0.774545
+
+
+
+====================================================================================
+
+
+
+Trained on 3 sets - (7,1) kernel
+[HD/sequence_1 1] TP=3.626 FP=0.000 FN=0.124 Prec=1.000 Rec=0.967 F1=0.983 RMSE_def=26.10 RMSE_ok=0.00 RMSE_def_norm=0.35 RMSE_ok_norm=1.00 Score final : 0.7789
+[HD/sequence_1 2] TP=2.803 FP=0.000 FN=0.009 Prec=1.000 Rec=0.997 F1=0.998 RMSE_def=11.83 RMSE_ok=0.00 RMSE_def_norm=0.70 RMSE_ok_norm=1.00 Score final : 0.9019
+[HD/sequence_1 3] TP=7.923 FP=0.000 FN=1.452 Prec=1.000 Rec=0.845 F1=0.916 RMSE_def=15.58 RMSE_ok=0.00 RMSE_def_norm=0.61 RMSE_ok_norm=1.00 Score final : 0.8429
+[HD/sequence_2 1] TP=4.938 FP=1.406 FN=1.624 Prec=0.778 Rec=0.753 F1=0.765 RMSE_def=25.97 RMSE_ok=0.31 RMSE_def_norm=0.35 RMSE_ok_norm=0.99 Score final : 0.7034
+[HD/sequence_2 2] TP=4.102 FP=1.172 FN=0.585 Prec=0.778 Rec=0.875 F1=0.824 RMSE_def=16.02 RMSE_ok=0.25 RMSE_def_norm=0.60 RMSE_ok_norm=0.99 Score final : 0.8058
+[HD/sequence_2 3] TP=4.672 FP=2.109 FN=0.953 Prec=0.689 Rec=0.831 F1=0.753 RMSE_def=23.03 RMSE_ok=0.48 RMSE_def_norm=0.42 RMSE_ok_norm=0.99 Score final : 0.7221
+[HD/sequence_3 1] TP=3.198 FP=0.234 FN=0.552 Prec=0.932 Rec=0.853 F1=0.891 RMSE_def=24.63 RMSE_ok=0.12 RMSE_def_norm=0.38 RMSE_ok_norm=1.00 Score final : 0.7586
+[HD/sequence_3 2] TP=4.666 FP=0.234 FN=0.022 Prec=0.952 Rec=0.995 F1=0.973 RMSE_def=18.47 RMSE_ok=0.12 RMSE_def_norm=0.54 RMSE_ok_norm=1.00 Score final : 0.8376
+[HD/sequence_3 3] TP=6.945 FP=0.234 FN=0.555 Prec=0.967 Rec=0.926 F1=0.946 RMSE_def=23.75 RMSE_ok=0.12 RMSE_def_norm=0.41 RMSE_ok_norm=1.00 Score final : 0.7848
+[SXGA/sequence_1 1] TP=15.193 FP=1.562 FN=0.432 Prec=0.907 Rec=0.972 F1=0.938 RMSE_def=27.51 RMSE_ok=0.27 RMSE_def_norm=0.31 RMSE_ok_norm=0.99 Score final : 0.7499
+[SXGA/sequence_1 2] TP=5.914 FP=2.344 FN=0.336 Prec=0.716 Rec=0.946 F1=0.815 RMSE_def=13.34 RMSE_ok=0.61 RMSE_def_norm=0.67 RMSE_ok_norm=0.98 Score final : 0.8221
+[SXGA/sequence_1 3] TP=9.350 FP=3.516 FN=0.025 Prec=0.727 Rec=0.997 F1=0.841 RMSE_def=18.53 RMSE_ok=0.64 RMSE_def_norm=0.54 RMSE_ok_norm=0.98 Score final : 0.7877
+[SXGA/sequence_2 1] TP=7.227 FP=1.378 FN=3.798 Prec=0.840 Rec=0.655 F1=0.736 RMSE_def=26.21 RMSE_ok=0.43 RMSE_def_norm=0.34 RMSE_ok_norm=0.99 Score final : 0.6905
+[SXGA/sequence_2 2] TP=11.070 FP=0.459 FN=5.468 Prec=0.960 Rec=0.669 F1=0.789 RMSE_def=14.23 RMSE_ok=0.18 RMSE_def_norm=0.64 RMSE_ok_norm=1.00 Score final : 0.8093
+[SXGA/sequence_2 3] TP=5.584 FP=0.919 FN=1.766 Prec=0.859 Rec=0.760 F1=0.806 RMSE_def=21.59 RMSE_ok=0.26 RMSE_def_norm=0.46 RMSE_ok_norm=0.99 Score final : 0.7538
+[SXGA/sequence_3 1] TP=8.106 FP=3.906 FN=1.269 Prec=0.675 Rec=0.865 F1=0.758 RMSE_def=30.33 RMSE_ok=1.80 RMSE_def_norm=0.24 RMSE_ok_norm=0.96 Score final : 0.6527
+[SXGA/sequence_3 2] TP=7.589 FP=4.297 FN=1.786 Prec=0.638 Rec=0.809 F1=0.714 RMSE_def=20.33 RMSE_ok=0.83 RMSE_def_norm=0.49 RMSE_ok_norm=0.98 Score final : 0.7282
+[SXGA/sequence_3 3] TP=8.311 FP=3.125 FN=2.627 Prec=0.727 Rec=0.760 F1=0.743 RMSE_def=24.51 RMSE_ok=0.84 RMSE_def_norm=0.39 RMSE_ok_norm=0.98 Score final : 0.7035
+[VGA/sequence_1 1] TP=2.616 FP=1.756 FN=0.019 Prec=0.598 Rec=0.993 F1=0.747 RMSE_def=27.49 RMSE_ok=0.33 RMSE_def_norm=0.31 RMSE_ok_norm=0.99 Score final : 0.6844
+[VGA/sequence_1 2] TP=8.738 FP=1.756 FN=0.044 Prec=0.833 Rec=0.995 F1=0.907 RMSE_def=18.72 RMSE_ok=0.33 RMSE_def_norm=0.53 RMSE_ok_norm=0.99 Score final : 0.8111
+[VGA/sequence_1 3] TP=8.764 FP=0.878 FN=0.017 Prec=0.909 Rec=0.998 F1=0.951 RMSE_def=26.29 RMSE_ok=0.29 RMSE_def_norm=0.34 RMSE_ok_norm=0.99 Score final : 0.7642
+[VGA/sequence_2 1] TP=10.091 FP=0.000 FN=0.048 Prec=1.000 Rec=0.995 F1=0.998 RMSE_def=27.67 RMSE_ok=0.00 RMSE_def_norm=0.31 RMSE_ok_norm=1.00 Score final : 0.7709
+[VGA/sequence_2 2] TP=7.189 FP=0.000 FN=0.053 Prec=1.000 Rec=0.993 F1=0.996 RMSE_def=15.85 RMSE_ok=0.00 RMSE_def_norm=0.60 RMSE_ok_norm=1.00 Score final : 0.8680
+[VGA/sequence_2 3] TP=11.531 FP=0.000 FN=0.056 Prec=1.000 Rec=0.995 F1=0.998 RMSE_def=23.41 RMSE_ok=0.00 RMSE_def_norm=0.41 RMSE_ok_norm=1.00 Score final : 0.8061
+[VGA/sequence_3 1] TP=3.106 FP=0.781 FN=0.019 Prec=0.799 Rec=0.994 F1=0.886 RMSE_def=29.51 RMSE_ok=0.14 RMSE_def_norm=0.26 RMSE_ok_norm=1.00 Score final : 0.7166
+[VGA/sequence_3 2] TP=2.672 FP=0.000 FN=0.453 Prec=1.000 Rec=0.855 F1=0.922 RMSE_def=13.16 RMSE_ok=0.00 RMSE_def_norm=0.67 RMSE_ok_norm=1.00 Score final : 0.8648
+[VGA/sequence_3 3] TP=6.509 FP=0.000 FN=0.522 Prec=1.000 Rec=0.926 F1=0.961 RMSE_def=23.74 RMSE_ok=0.00 RMSE_def_norm=0.41 RMSE_ok_norm=1.00 Score final : 0.7911
+
+=== SCORE FINAL MOYEN SUR TOUTES LES SÉQUENCES ===
+Score moyen = 0.774478
