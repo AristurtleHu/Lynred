@@ -73,12 +73,13 @@ def correct_single_image_median(img, defect_mask):
 # ==========================================
 # 3. Inference pipeline
 # ==========================================
-def run_ultimate_inference(model_path="best_defect_net_2d.pth", root_dir="train/VGA"):
+def run_inference(model_path="best_defect_net_2d.pth", root_dir="train"):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = EdgeCameraDefectNet2D(in_channels=4).to(device)
     model.load_state_dict(torch.load(model_path, map_location=device))
     model.eval()
 
+    sensors = ["VGA", "HD", "SXGA"]
     seqs = ["sequence_1", "sequence_2", "sequence_3"]
     sims = [
         "low dyn with columns 1",
@@ -87,49 +88,44 @@ def run_ultimate_inference(model_path="best_defect_net_2d.pth", root_dir="train/
     ]
     root_path = Path(root_dir)
 
-    # Optimization 1: lengthen morphological opening kernel to (9,1)
-    # This enforces that detected defects must be vertically continuous for at least 9 pixels
-    # and will remove many isolated false positives caused by high-frequency texture
-    morph_kernel = np.ones((9, 1), np.uint8)
-
     with torch.no_grad():
-        for seq in seqs:
-            for sim in sims:
-                folder_path = root_path / seq / sim
-                if not folder_path.exists():
-                    continue
+        for sensor in sensors:
+            for seq in seqs:
+                for sim in sims:
+                    folder_path = root_path / sensor / seq / sim
+                    if not folder_path.exists():
+                        continue
 
-                img_files = sorted(folder_path.glob("*.png"))
-                if not img_files:
-                    continue
+                    img_files = sorted(folder_path.glob("*.png"))
+                    if not img_files:
+                        continue
 
-                print(f"[{seq}/{sim}] Extracting features...")
-                img_stack = np.array(
-                    [cv2.imread(str(f), -1).astype(np.float32) for f in img_files]
-                )
-                features = extract_2d_features(img_stack)
-                del img_stack  # release large image memory
+                    print(f"[{sensor}/{seq}/{sim}] Inferencing...")
+                    img_stack = np.array(
+                        [cv2.imread(str(f), -1).astype(np.float32) for f in img_files]
+                    )
+                    features = extract_2d_features(img_stack)
+                    del img_stack  # release large image memory
 
-                x_input = torch.tensor(features).unsqueeze(0).to(device)
-                pred_prob = model(x_input).cpu().squeeze().numpy()
+                    x_input = torch.tensor(features).unsqueeze(0).to(device)
+                    pred_prob = model(x_input).cpu().squeeze().numpy()
 
-                # Optimization 2: raise decision threshold to 0.6 to further reduce FP
-                raw_mask = (pred_prob > 0.6).astype(np.uint8)
+                    # 1. Threshold
+                    raw_mask = (pred_prob > 0.6).astype(np.uint8)
 
-                # Perform strong vertical opening to remove non-column noise
-                clean_mask = cv2.morphologyEx(
-                    raw_mask, cv2.MORPH_OPEN, morph_kernel
-                ).astype(bool)
+                    # 2. Opening with (9, 1) kernel
+                    clean_mask = cv2.morphologyEx(
+                        raw_mask, cv2.MORPH_OPEN, np.ones((9, 1), np.uint8)
+                    ).astype(bool)
 
-                out_folder = folder_path / "result"
-                out_folder.mkdir(parents=True, exist_ok=True)
+                    out_folder = folder_path / "result"
+                    out_folder.mkdir(parents=True, exist_ok=True)
 
-                print(f"  -> Applying local median inpainting...")
-                for f_path in img_files:
-                    img = cv2.imread(str(f_path), -1)
-                    corr_img = correct_single_image_median(img, clean_mask)
-                    cv2.imwrite(str(out_folder / f_path.name), corr_img)
+                    for f_path in img_files:
+                        img = cv2.imread(str(f_path), -1)
+                        corr_img = correct_single_image_median(img, clean_mask)
+                        cv2.imwrite(str(out_folder / f_path.name), corr_img)
 
 
 if __name__ == "__main__":
-    run_ultimate_inference()
+    run_inference()
