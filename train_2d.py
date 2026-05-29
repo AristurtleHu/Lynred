@@ -37,7 +37,8 @@ class EdgeCameraDefectNet2D(nn.Module):
 # 2. 2D feature extraction
 # ==========================================
 def extract_2d_features(img_stack):
-    """Keep the height H dimension and extract temporal statistics per pixel.
+    """
+    Keep the height H dimension and extract temporal statistics per pixel.
     Input shape: (Time, H, W)
     Output shape: (4, H, W)
     """
@@ -87,7 +88,7 @@ class RandomPatchDataset(Dataset):
         self.num_images = len(features_list)
 
     def __len__(self):
-        # For each full-size image, we randomly extract patches_per_img patches for training
+        # For each image, we randomly extract patches_per_img patches for training
         return self.num_images * self.patches_per_img
 
     def __getitem__(self, idx):
