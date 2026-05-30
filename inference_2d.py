@@ -4,10 +4,48 @@ import numpy as np
 import torch
 import torch.nn as nn
 from pathlib import Path
+import json
 
 
 # ==========================================
-# 1. 2D network architecture
+# 1. Pure Detection Diagnostic Evaluator
+# ==========================================
+def evaluate_pure_detection(mask, json_path, stage_name="Pure AI Vision"):
+    """
+    Column-level detection evaluation.
+    Added `stage_name` parameter to distinguish between Raw Mask and Clean Mask.
+    """
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Extract Ground Truth just like metrics.py does
+    true_def_cols = set()
+    for defect in data:
+        x_coords = defect.get("x_coord", [])
+        if not isinstance(x_coords, list):
+            x_coords = [x_coords]
+        true_def_cols.update(x_coords)
+
+    # Extract predicted defective columns from the 2D mask
+    col_defect_counts = mask.sum(axis=0)
+    pred_def_cols = set(np.where(col_defect_counts > 3)[0])
+
+    # Calculate metrics
+    TP = len(pred_def_cols.intersection(true_def_cols))
+    FP = len(pred_def_cols.difference(true_def_cols))
+    FN = len(true_def_cols.difference(pred_def_cols))
+
+    prec = TP / (TP + FP) if (TP + FP) > 0 else 0.0
+    rec = TP / (TP + FN) if (TP + FN) > 0 else 0.0
+    f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0.0
+
+    print(
+        f"  [{stage_name}] TP: {TP:<3} | FP: {FP:<3} | FN: {FN:<3} ---> Prec: {prec:.4f} | Rec: {rec:.4f} | F1: {f1:.4f}"
+    )
+
+
+# ==========================================
+# 2. 2D Network Architecture
 # ==========================================
 class EdgeCameraDefectNet2D(nn.Module):
     def __init__(self, in_channels=4):
@@ -39,39 +77,39 @@ def extract_2d_features(img_stack):
 
 
 # ==========================================
-# 2. Correction
+# 3. Correction
 # ==========================================
-def correct_single_image_median(img, defect_mask):
+def correct_single_image(img, defect_mask):
+    """Correct defective pixels."""
     H, W = img.shape
     corrected = img.copy().astype(np.float32)
     ys, xs = np.where(defect_mask)
 
     for y, x in zip(ys, xs):
-        # Take a 5x5 neighborhood around the defective pixel
-        y_min, y_max = max(0, y - 2), min(H, y + 3)
-        x_min, x_max = max(0, x - 2), min(W, x + 3)
+        left = x - 1
+        while left > 0 and defect_mask[y, left]:
+            left -= 1
 
-        # Extract the local image patch and mask patch
-        local_patch = corrected[y_min:y_max, x_min:x_max]
-        local_mask = defect_mask[y_min:y_max, x_min:x_max]
+        right = x + 1
+        while right < W - 1 and defect_mask[y, right]:
+            right += 1
 
-        # Sample only from healthy pixels not marked as defective
-        valid_pixels = local_patch[~local_mask]
-
-        if len(valid_pixels) > 0:
-            # Use median: very smoothing while preserving edges
-            corrected[y, x] = np.median(valid_pixels)
-        else:
-            # Rare case: if all pixels in 5x5 are defective, fall back to horizontal neighbors
-            left = max(0, x - 1)
-            right = min(W - 1, x + 1)
-            corrected[y, x] = (corrected[y, left] + corrected[y, right]) / 2.0
+        if left >= 0 and right < W:
+            w_left = (right - x) / (right - left)
+            w_right = (x - left) / (right - left)
+            corrected[y, x] = (
+                w_left * corrected[y, left] + w_right * corrected[y, right]
+            )
+        elif left >= 0:
+            corrected[y, x] = corrected[y, left]
+        elif right < W:
+            corrected[y, x] = corrected[y, right]
 
     return corrected.astype(np.uint16)
 
 
 # ==========================================
-# 3. Inference pipeline
+# 4. Main Inference Pipeline
 # ==========================================
 def run_inference(model_path="best_defect_net_2d.pth", root_dir="train"):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -110,20 +148,43 @@ def run_inference(model_path="best_defect_net_2d.pth", root_dir="train"):
                     x_input = torch.tensor(features).unsqueeze(0).to(device)
                     pred_prob = model(x_input).cpu().squeeze().numpy()
 
-                    # 1. Threshold
-                    raw_mask = (pred_prob > 0.6).astype(np.uint8)
+                    json_files = list(folder_path.glob("*.json"))
+                    json_path = json_files[0] if json_files else None
 
-                    # 2. Opening with (9, 1) kernel
-                    clean_mask = cv2.morphologyEx(
-                        raw_mask, cv2.MORPH_OPEN, np.ones((9, 1), np.uint8)
-                    ).astype(bool)
+                    # 1. Threshold
+                    raw_mask = (pred_prob > 0.25).astype(np.uint8)
+
+                    # if json_path:
+                    #     evaluate_pure_detection(
+                    #         raw_mask, json_path, stage_name="1. Raw AI Mask  "
+                    #     )
+
+                    # 2. Column-level Filtering based on defect pixel counts
+
+                    col_counts = raw_mask.sum(axis=0)
+
+                    if sensor == "HD":
+                        valid_cols = col_counts >= 35
+                    elif sensor == "SXGA":
+                        valid_cols = col_counts >= 55
+                    else:
+                        valid_cols = col_counts >= 35
+
+                    # Clean mask after column filtering
+                    filtered_mask = raw_mask.copy()
+                    filtered_mask[:, ~valid_cols] = 0
+
+                    # if json_path:
+                    #     evaluate_pure_detection(
+                    #         filtered_mask, json_path, stage_name="2. After Filter "
+                    #     )
 
                     out_folder = folder_path / "result"
                     out_folder.mkdir(parents=True, exist_ok=True)
 
                     for f_path in img_files:
                         img = cv2.imread(str(f_path), -1)
-                        corr_img = correct_single_image_median(img, clean_mask)
+                        corr_img = correct_single_image(img, filtered_mask)
                         cv2.imwrite(str(out_folder / f_path.name), corr_img)
 
 
