@@ -60,18 +60,28 @@ def load_2d_labels_from_json(json_path, H, W):
     """Generate a 2D label mask of shape (H, W)."""
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
-    indices = []
-    for c in data:
-        if isinstance(c["x_coord"], list):
-            indices.extend(c["x_coord"])
-        else:
-            indices.append(c["x_coord"])
 
     label = np.zeros((H, W), dtype=np.float32)
-    # Currently the JSON only provides column (x) indices, so mark whole columns as 1
-    # The 2D convolution will use local texture to decide if it's a local defect
-    label[:, indices] = 1.0
-    return label, indices
+    indices = set()
+
+    for defect in data:
+        x_coords = defect.get("x_coord", [])
+        if not isinstance(x_coords, list):
+            x_coords = [x_coords]
+        indices.update(x_coords)
+
+        y_starts = defect.get("y_start", [0])
+        y_stops = defect.get("y_stop", [H])
+
+        # Cross-product: Every X column in this cluster shares ALL the Y segments
+        for x in x_coords:
+            if 0 <= x < W:
+                for y0, y1 in zip(y_starts, y_stops):
+                    y0 = max(0, int(y0))
+                    y1 = min(H, int(y1))
+                    label[y0:y1, x] = 1.0
+
+    return label, list(indices)
 
 
 # ==========================================
