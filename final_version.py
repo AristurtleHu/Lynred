@@ -81,7 +81,7 @@ def correct_side_window(sequence, defective_cols):
 def fix_img(sensor, seq, sim):
     def_path = os.path.join(seq,
                              f"low dyn with columns {sim}")
-    res_path = os.path.join(def_path, "temp")
+    res_path = os.path.join(def_path, "result")
     os.makedirs(res_path, exist_ok=True)
     def_files = sorted([os.path.join(def_path, f) for f in os.listdir(def_path) if f.lower().endswith(".png")])
     arr_img = []
