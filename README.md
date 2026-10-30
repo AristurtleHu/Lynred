@@ -2,7 +2,7 @@
 
 A high-performance pipeline designed to detect and restore heavily degraded vertical column defects.
 
-It is engineered during my R&D internship with **LYNRED** for raw 16-bit infrared image sequences across VGA, SXGA, and HD sensors. 
+It is engineered during the collaboration with **LYNRED** for raw 16-bit infrared image sequences across VGA, SXGA, and HD sensors. 
 
 Our solution achieved the **top one** comprehensive performance among all participating teams, outperforming peers in both strict **quantitative benchmarks** and **qualitative visual fidelity**.
 
